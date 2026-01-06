@@ -23,3 +23,10 @@ describe.each([5, 10, 20])
         expect(fizzBuzz(input)).toBe("Buzz");
     });
 });
+
+describe.each([15])
+('Fizz Buzz', (input) => {
+    test(`${input} returns FizzBuzz`, () => {
+        expect(fizzBuzz(input)).toBe("FizzBuzz");
+    });
+});
