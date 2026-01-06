@@ -9,3 +9,11 @@ describe.each([
     expect(fizzBuzz(input)).toBe(expected);
   });
 });
+
+describe.each([
+  {input: 3, expected: "Fizz"},
+])('Fizz Buzz', ({input, expected}) => {
+  test(`convert the number ${input} to "${expected}"`, () => {
+    expect(fizzBuzz(input)).toBe(expected);
+  });
+});
