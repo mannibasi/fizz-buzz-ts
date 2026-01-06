@@ -16,3 +16,10 @@ describe.each([3, 6, 9])
     expect(fizzBuzz(input)).toBe("Fizz");
   });
 });
+
+describe.each([5])
+('Fizz Buzz', (input) => {
+    test(`${input} returns Buzz`, () => {
+        expect(fizzBuzz(input)).toBe("Buzz");
+    });
+});
