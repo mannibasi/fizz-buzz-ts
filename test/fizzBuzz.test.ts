@@ -12,6 +12,7 @@ describe.each([
 
 describe.each([
   {input: 3, expected: "Fizz"},
+  {input: 6, expected: "Fizz"},
 ])('Fizz Buzz', ({input, expected}) => {
   test(`convert the number ${input} to "${expected}"`, () => {
     expect(fizzBuzz(input)).toBe(expected);
