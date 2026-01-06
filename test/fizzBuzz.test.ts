@@ -10,12 +10,9 @@ describe.each([
   });
 });
 
-describe.each([
-  {input: 3, expected: "Fizz"},
-  {input: 6, expected: "Fizz"},
-  {input: 9, expected: "Fizz"},
-])('Fizz Buzz', ({input, expected}) => {
-  test(`convert the number ${input} to "${expected}"`, () => {
-    expect(fizzBuzz(input)).toBe(expected);
+describe.each([3, 6, 9])
+('Fizz Buzz', (input) => {
+  test(`${input} returns Fizz`, () => {
+    expect(fizzBuzz(input)).toBe("Fizz");
   });
 });
