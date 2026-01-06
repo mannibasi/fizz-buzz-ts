@@ -17,7 +17,7 @@ describe.each([3, 6, 9])
   });
 });
 
-describe.each([5])
+describe.each([5, 10, 20])
 ('Fizz Buzz', (input) => {
     test(`${input} returns Buzz`, () => {
         expect(fizzBuzz(input)).toBe("Buzz");
