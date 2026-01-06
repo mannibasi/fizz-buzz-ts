@@ -1,13 +1,11 @@
 import { fizzBuzz } from '../src/fizzBuzz';
 
-describe('Fizz Buzz', () => {
-  it('convert the number 1 to the string "1"', () => {
-    expect(fizzBuzz(1)).toBe("1");
-  });
-  it('convert the number 2 to the string "2"', () => {
-    expect(fizzBuzz(2)).toBe("2");
-  });
-  it('convert the number 4 to the string "4"', () => {
-    expect(fizzBuzz(4)).toBe("4");
+describe.each([
+    {input: 1, expected: "1"},
+    {input: 2, expected: "2"},
+    {input: 4, expected: "4"},
+])('Fizz Buzz', ({input, expected}) => {
+  test(`convert the number ${input} to the string "${expected}"`, () => {
+    expect(fizzBuzz(input)).toBe(expected);
   });
 });
